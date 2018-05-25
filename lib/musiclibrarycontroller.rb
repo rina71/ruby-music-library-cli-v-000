@@ -21,11 +21,25 @@ class MusicLibraryController
     until input == "exit"
       input = gets.strip
       if input == "list songs"
-        list_songs
-
+          list_songs
+       if input == "list artists"
+          list_artists
+        if input == "list genres"
+          list_genres
+          if input == "list artist"
+          list_songs_by_artist
+            if input == "list genre"
+            list_songs_by_genre
+              if input == "play song"
+              play_song
+              end
+            end
+          end
+        end
       end
     end
   end
+end
 
   def list_songs
     Song.all.sort_by{|m| m.name}.each_with_index{|s,i| puts "#{i + 1}. #{s.artist.name} - #{s.name} - #{s.genre.name}"}
