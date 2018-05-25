@@ -38,7 +38,7 @@ class MusicLibraryController
               if input == "play song"
               play_song
               end
-          
+
   end
 end
 
