@@ -17,12 +17,14 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
-
-      input = gets.strip until input == "exit"
+    input = " "
+    until input == "exit"
+      input = gets.strip
       if input == "list songs"
         list_songs
 
       end
+    end
   end
 
   def list_songs
